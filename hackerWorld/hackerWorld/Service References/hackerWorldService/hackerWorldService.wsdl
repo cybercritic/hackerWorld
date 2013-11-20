@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="hackerWorldService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/hackerWorldService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IhackerWorldService_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_sendPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:sendPassword" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_sendPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sendPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_changePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:changePassword" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_changePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:changePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteHDDItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteHDDItem" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteHDDItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteHDDItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteCPUItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCPUItem" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteCPUItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCPUItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteMission_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteMission" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteMission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteMissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getHDDInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getHDDInfo" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getHDDInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getHDDInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getCPUInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCPUInfo" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getCPUInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCPUInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getProgramTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProgramTypes" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getProgramTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProgramTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getCompilerJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCompilerJob" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getCompilerJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCompilerJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getMissionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMissionList" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getMissionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMissionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getUserMission_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserMission" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getUserMission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserMissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getSlaves_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSlaves" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getSlaves_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSlavesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStats" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_getStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_checkClientVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkClientVersion" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_checkClientVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkClientVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_purchaseFromMarket_InputMessage">
+    <wsdl:part name="parameters" element="tns:purchaseFromMarket" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_purchaseFromMarket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:purchaseFromMarketResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_swapProgsHDD_InputMessage">
+    <wsdl:part name="parameters" element="tns:swapProgsHDD" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_swapProgsHDD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:swapProgsHDDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addCPUprogram_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCPUprogram" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addCPUprogram_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCPUprogramResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addCompilerJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCompilerJob" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addCompilerJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCompilerJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addHDDslot_InputMessage">
+    <wsdl:part name="parameters" element="tns:addHDDslot" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addHDDslot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addHDDslotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addCPUslot_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCPUslot" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addCPUslot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCPUslotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addMission_InputMessage">
+    <wsdl:part name="parameters" element="tns:addMission" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_addMission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addMissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_claimCompilerJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:claimCompilerJob" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_claimCompilerJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:claimCompilerJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_claimMission_InputMessage">
+    <wsdl:part name="parameters" element="tns:claimMission" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_claimMission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:claimMissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_claimDonation_InputMessage">
+    <wsdl:part name="parameters" element="tns:claimDonation" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_claimDonation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:claimDonationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_setSlave_InputMessage">
+    <wsdl:part name="parameters" element="tns:setSlave" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_setSlave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setSlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteSlave_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSlave" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_deleteSlave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSlaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_decrementHDDuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:decrementHDDuses" />
+  </wsdl:message>
+  <wsdl:message name="IhackerWorldService_decrementHDDuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:decrementHDDusesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IhackerWorldService">
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/RegisterUser" message="tns:IhackerWorldService_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/RegisterUserResponse" message="tns:IhackerWorldService_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sendPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/sendPassword" message="tns:IhackerWorldService_sendPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/sendPasswordResponse" message="tns:IhackerWorldService_sendPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/Login" message="tns:IhackerWorldService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/LoginResponse" message="tns:IhackerWorldService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/changePassword" message="tns:IhackerWorldService_changePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/changePasswordResponse" message="tns:IhackerWorldService_changePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteHDDItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/deleteHDDItem" message="tns:IhackerWorldService_deleteHDDItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/deleteHDDItemResponse" message="tns:IhackerWorldService_deleteHDDItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCPUItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/deleteCPUItem" message="tns:IhackerWorldService_deleteCPUItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/deleteCPUItemResponse" message="tns:IhackerWorldService_deleteCPUItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteMission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/deleteMission" message="tns:IhackerWorldService_deleteMission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/deleteMissionResponse" message="tns:IhackerWorldService_deleteMission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getHDDInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getHDDInfo" message="tns:IhackerWorldService_getHDDInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getHDDInfoResponse" message="tns:IhackerWorldService_getHDDInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCPUInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getCPUInfo" message="tns:IhackerWorldService_getCPUInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getCPUInfoResponse" message="tns:IhackerWorldService_getCPUInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProgramTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getProgramTypes" message="tns:IhackerWorldService_getProgramTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getProgramTypesResponse" message="tns:IhackerWorldService_getProgramTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompilerJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getCompilerJob" message="tns:IhackerWorldService_getCompilerJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getCompilerJobResponse" message="tns:IhackerWorldService_getCompilerJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getUserInfo" message="tns:IhackerWorldService_getUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getUserInfoResponse" message="tns:IhackerWorldService_getUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMissionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getMissionList" message="tns:IhackerWorldService_getMissionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getMissionListResponse" message="tns:IhackerWorldService_getMissionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserMission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getUserMission" message="tns:IhackerWorldService_getUserMission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getUserMissionResponse" message="tns:IhackerWorldService_getUserMission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSlaves">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getSlaves" message="tns:IhackerWorldService_getSlaves_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getSlavesResponse" message="tns:IhackerWorldService_getSlaves_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/getStats" message="tns:IhackerWorldService_getStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/getStatsResponse" message="tns:IhackerWorldService_getStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkClientVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/checkClientVersion" message="tns:IhackerWorldService_checkClientVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/checkClientVersionResponse" message="tns:IhackerWorldService_checkClientVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="purchaseFromMarket">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/purchaseFromMarket" message="tns:IhackerWorldService_purchaseFromMarket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/purchaseFromMarketResponse" message="tns:IhackerWorldService_purchaseFromMarket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="swapProgsHDD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/swapProgsHDD" message="tns:IhackerWorldService_swapProgsHDD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/swapProgsHDDResponse" message="tns:IhackerWorldService_swapProgsHDD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCPUprogram">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/addCPUprogram" message="tns:IhackerWorldService_addCPUprogram_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/addCPUprogramResponse" message="tns:IhackerWorldService_addCPUprogram_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCompilerJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/addCompilerJob" message="tns:IhackerWorldService_addCompilerJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/addCompilerJobResponse" message="tns:IhackerWorldService_addCompilerJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addHDDslot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/addHDDslot" message="tns:IhackerWorldService_addHDDslot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/addHDDslotResponse" message="tns:IhackerWorldService_addHDDslot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addCPUslot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/addCPUslot" message="tns:IhackerWorldService_addCPUslot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/addCPUslotResponse" message="tns:IhackerWorldService_addCPUslot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addMission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/addMission" message="tns:IhackerWorldService_addMission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/addMissionResponse" message="tns:IhackerWorldService_addMission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="claimCompilerJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/claimCompilerJob" message="tns:IhackerWorldService_claimCompilerJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/claimCompilerJobResponse" message="tns:IhackerWorldService_claimCompilerJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="claimMission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/claimMission" message="tns:IhackerWorldService_claimMission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/claimMissionResponse" message="tns:IhackerWorldService_claimMission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="claimDonation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/claimDonation" message="tns:IhackerWorldService_claimDonation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/claimDonationResponse" message="tns:IhackerWorldService_claimDonation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setSlave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/setSlave" message="tns:IhackerWorldService_setSlave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/setSlaveResponse" message="tns:IhackerWorldService_setSlave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSlave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/deleteSlave" message="tns:IhackerWorldService_deleteSlave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/deleteSlaveResponse" message="tns:IhackerWorldService_deleteSlave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="decrementHDDuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IhackerWorldService/decrementHDDuses" message="tns:IhackerWorldService_decrementHDDuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IhackerWorldService/decrementHDDusesResponse" message="tns:IhackerWorldService_decrementHDDuses_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IhackerWorldService" type="tns:IhackerWorldService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendPassword">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/sendPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/changePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteHDDItem">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/deleteHDDItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCPUItem">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/deleteCPUItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteMission">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/deleteMission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHDDInfo">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getHDDInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCPUInfo">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getCPUInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProgramTypes">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getProgramTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompilerJob">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getCompilerJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMissionList">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getMissionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserMission">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getUserMission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSlaves">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getSlaves" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStats">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/getStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkClientVersion">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/checkClientVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purchaseFromMarket">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/purchaseFromMarket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="swapProgsHDD">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/swapProgsHDD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCPUprogram">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/addCPUprogram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCompilerJob">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/addCompilerJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addHDDslot">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/addHDDslot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCPUslot">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/addCPUslot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addMission">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/addMission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="claimCompilerJob">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/claimCompilerJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="claimMission">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/claimMission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="claimDonation">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/claimDonation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setSlave">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/setSlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSlave">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/deleteSlave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="decrementHDDuses">
+      <soap:operation soapAction="http://tempuri.org/IhackerWorldService/decrementHDDuses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="hackerWorldService">
+    <wsdl:port name="BasicHttpBinding_IhackerWorldService" binding="tns:BasicHttpBinding_IhackerWorldService">
+      <soap:address location="http://cybercritics.org/hackerWorldService/hackerWorldService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

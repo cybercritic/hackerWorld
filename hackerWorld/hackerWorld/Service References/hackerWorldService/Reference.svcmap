@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ff108682-7ef0-4e3a-ada4-01b7e4fb23e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://cybercritics.org/hackerWorldService/hackerWorldService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="hackerWorldService.xsd" MetadataType="Schema" ID="d1c683e0-3b12-4808-933b-49766afc269b" SourceId="1" SourceUrl="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?xsd=xsd1" />
+    <MetadataFile FileName="hackerWorldService1.xsd" MetadataType="Schema" ID="914cc8c5-847a-4fb3-ab18-60376566bf04" SourceId="1" SourceUrl="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?xsd=xsd0" />
+    <MetadataFile FileName="hackerWorldService.disco" MetadataType="Disco" ID="0b5e3de8-5eaf-4ccf-af42-488bcfaf8afc" SourceId="1" SourceUrl="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?disco" />
+    <MetadataFile FileName="hackerWorldService.wsdl" MetadataType="Wsdl" ID="50824a45-1290-464a-9d30-689514255b2c" SourceId="1" SourceUrl="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?wsdl" />
+    <MetadataFile FileName="hackerWorldService2.xsd" MetadataType="Schema" ID="82fcc3b6-83fb-45ce-b3bf-78257b4e0e53" SourceId="1" SourceUrl="http://cybercritics.org/hackerWorldService/hackerWorldService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/hackerWorldService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/hackerWorldService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="HardDrive">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DriveSize" type="xs:int" />
+      <xs:element minOccurs="0" name="Programs" nillable="true" type="tns:ArrayOfProgramHW" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HardDrive" nillable="true" type="tns:HardDrive" />
+  <xs:complexType name="ArrayOfProgramHW">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProgramHW" nillable="true" type="tns:ProgramHW" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProgramHW" nillable="true" type="tns:ArrayOfProgramHW" />
+  <xs:complexType name="ProgramHW">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BasePrice" type="xs:float" />
+      <xs:element minOccurs="0" name="HddSlot" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramSubType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="UsesLeft" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProgramHW" nillable="true" type="tns:ProgramHW" />
+  <xs:complexType name="CPUload">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Programs" nillable="true" type="tns:ArrayOfCPUslotHW" />
+      <xs:element minOccurs="0" name="TotalCPUslots" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CPUload" nillable="true" type="tns:CPUload" />
+  <xs:complexType name="ArrayOfCPUslotHW">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CPUslotHW" nillable="true" type="tns:CPUslotHW" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCPUslotHW" nillable="true" type="tns:ArrayOfCPUslotHW" />
+  <xs:complexType name="CPUslotHW">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CpuSlot" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramSubType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramVersion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CPUslotHW" nillable="true" type="tns:CPUslotHW" />
+  <xs:complexType name="ProgramTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProgramTypesLst" nillable="true" type="tns:ArrayOfProgramHW" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProgramTypes" nillable="true" type="tns:ProgramTypes" />
+  <xs:complexType name="CompilerJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BuddyID" type="xs:long" />
+      <xs:element minOccurs="0" name="BuddyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:long" />
+      <xs:element minOccurs="0" name="ProgramSubType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:long" />
+      <xs:element minOccurs="0" name="UserID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompilerJob" nillable="true" type="tns:CompilerJob" />
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CpuSlots" type="xs:int" />
+      <xs:element minOccurs="0" name="HddSlots" type="xs:int" />
+      <xs:element minOccurs="0" name="UserCash" type="xs:long" />
+      <xs:element minOccurs="0" name="UserGold" type="xs:long" />
+      <xs:element minOccurs="0" name="UserHatPoints" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="MissionList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Missions" nillable="true" type="tns:ArrayOfMissionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MissionList" nillable="true" type="tns:MissionList" />
+  <xs:complexType name="ArrayOfMissionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MissionType" nillable="true" type="tns:MissionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMissionType" nillable="true" type="tns:ArrayOfMissionType" />
+  <xs:complexType name="MissionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HatPoints" type="xs:int" />
+      <xs:element minOccurs="0" name="MissionID" type="xs:int" />
+      <xs:element minOccurs="0" name="MissionPay" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MissionType" nillable="true" type="tns:MissionType" />
+  <xs:complexType name="UserMission">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HaveAdmin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HavePass" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MissionID" type="xs:int" />
+      <xs:element minOccurs="0" name="NeedAdmin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PassStrength" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramGroup" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramSubGroup" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserMission" nillable="true" type="tns:UserMission" />
+  <xs:complexType name="SlaveListHW">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SlaveList" nillable="true" type="tns:ArrayOfSlave" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SlaveListHW" nillable="true" type="tns:SlaveListHW" />
+  <xs:complexType name="ArrayOfSlave">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Slave" nillable="true" type="tns:Slave" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSlave" nillable="true" type="tns:ArrayOfSlave" />
+  <xs:complexType name="Slave">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdminPass" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:long" />
+      <xs:element minOccurs="0" name="SlaveFiles" nillable="true" type="tns:ArrayOfSlaveSlot" />
+      <xs:element minOccurs="0" name="SlaveID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:long" />
+      <xs:element minOccurs="0" name="UserPass" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Slave" nillable="true" type="tns:Slave" />
+  <xs:complexType name="ArrayOfSlaveSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SlaveSlot" nillable="true" type="tns:SlaveSlot" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSlaveSlot" nillable="true" type="tns:ArrayOfSlaveSlot" />
+  <xs:complexType name="SlaveSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProgramGroup" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramSubGroup" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgramVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="SlaveID" type="xs:int" />
+      <xs:element minOccurs="0" name="SlotID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SlaveSlot" nillable="true" type="tns:SlaveSlot" />
+  <xs:complexType name="UserStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RegisteredUsers" type="xs:long" />
+      <xs:element minOccurs="0" name="Top10black" nillable="true" type="tns:ArrayOfUserStatOne" />
+      <xs:element minOccurs="0" name="Top10cash" nillable="true" type="tns:ArrayOfUserStatOne" />
+      <xs:element minOccurs="0" name="Top10white" nillable="true" type="tns:ArrayOfUserStatOne" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserStats" nillable="true" type="tns:UserStats" />
+  <xs:complexType name="ArrayOfUserStatOne">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserStatOne" nillable="true" type="tns:UserStatOne" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserStatOne" nillable="true" type="tns:ArrayOfUserStatOne" />
+  <xs:complexType name="UserStatOne">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:long" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserStatOne" nillable="true" type="tns:UserStatOne" />
+</xs:schema>
